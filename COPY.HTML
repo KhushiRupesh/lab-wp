@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WebD2: Applying Typography in CSS</title>
+<!-- Hack to get IE to recognize  HTML5 elements-->
+<!-- See http://remysharp.com/2009/01/07/html5-enabling-script/comment-page-3/#allcomments-->
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="../../../styles/webd2.css" media="screen">
+<link type="text/css" rel="stylesheet" href="../../../styles/webd2_print.css" media="print">
+</head>
+<body id="studentPage">
+<div id="wrapper">
+<div id="banner" role="banner">
+<div id="skip"><a href="#main">Skip to main content</a></div>
+<div id="siteTitle">Web Design &amp; Development I</div>
+<div id="version">Version 2.0</div>
+<div id="subTitle">Student Version</div>
+</div>
+<nav role="navigation" aria-label="Main menu">
+<ul>
+<li><a href="../../../student/index.html">Home</a></li>
+<li><a href="../../../student/lessons.html">Lessons</a></li>
+<li><a href="../../../student/resources.html">Resources</a></li>
+<li id="btnPrev"><a href="../../../student/unit3/module3/lesson1.html">Previous</a></li>
+<li id="btnNext"><a href="../../../student/unit3/module4/index.html">Next</a></li>
+</ul>
+</nav>
+<div id="main" role="main">
+<div class="breadCrumbs" role="navigation" aria-label="Bread Crumbs"><a href="../index.html">UNIT 3</a> > <a href="index.html">MODULE 3</a></div>
+<h1>Lesson 2: Applying Typography in CSS</h1>
+
+<h2>Overview</h2>
+<p>In this lesson you will learn some of the specific CSS properties that are used to define typography on web pages, and will apply these properties to your portfolio website. You will also learn some strategies for selecting a font family.</p>
+
+<h2>Learner Outcomes</h2>
+<p>At the completion of this exercise:</p>
+<ul>
+	<li>you will be able to identify whether a font is serif, sans-serif, or another font family.</li>
+	<li>you will be able to make informed decisions about which font families to use on a website, based in part on the likelihood that these fonts will be installed on users' computers.</li>
+	<li>you  will be able to define the typography of your site by setting the font-family, font-size, font-weight, line-height, text-align, and letter-spacing properties in CSS.</li>
+</ul>
+
+<h2>Font Families: Serif, Sans-serif, and others</h2>
+
+<p>In CSS (and in typography in general) there are five basic types, or families, of fonts: serif, sans serif, cursive, fantasy, and monospace.</p>
+
+<p><strong>Serif</strong> fonts have small lines or strokes that extend from the ends of characters. They can look like small feet, caps, tails, flags or dots. Serif fonts have been used for centuries in printed books, magazines and newspapers.</p>
+
+<p><strong>Sans-serif</strong> fonts do not have serifs (&quot;sans&quot; is French for &quot;without&quot;). These fonts are simple and straightforward.</p>
+
+<p>There has been extensive research on which of these font families, serif or sans-serif, is easier to read. Unfortunately, results are inconclusive. There are dozens of studies favoring both font families. The bottom line: There are many variables affecting readability of text, not just font family alone. For the body of a web page, it's important to choose a font that is not too cluttered and that flows gracefully from letter to letter without too much space between letters. Generally the best choice for attaining this uncluttered, flowing, easy-to-read look is sans-serif. However, it's possible to attain this look with certain serif fonts as well.</p>
+
+<p>For page titles, headings and sub-headings, a serif font is sometimes a better choice, because they can be perceived as more stately and grand, which helps to contribute to how readers perceive the hierarchy of the page.</p>
+
+<h3>What about <span style="font-family:cursive">cursive</span>, <span style="font-family:fantasy">fantasy</span>, and <span style="font-family:monospace">monospace</span>?</h3>
+<p>These fonts are more difficult to read and should be used sparingly. Depending on the message or feeling you're trying to communicate, they might be suitable for short sections of text, such as headings or subheadings.</p>
+
+<h2>Common Typographic Properties in CSS</h2>
+
+<p>Typography on the Web involves the interplay between various properties in CSS. Here are a few of the most common:</p>
+
+<h3>font-family</h3>
+
+<p>This property specifies the font of an element. The value of <span class="property">font-family</span> is a list of preferred fonts, separated by a comma, as in these example:</p>
+<pre class="example">
+	body {
+		font-family: Verdana, Arial, sans-serif;
+	}
+	h1 {
+		font-family: "Times New Roman", Times, serif;
+	}
+</pre>
+<p>If the user has the first font in the list installed on their computer, their browser will display that font. If they don't, the browser will try to display the next font in the list. The last font in the list should always be one of the five <em>generic</em> font families, described above. Again, they are:</p>
+<ul style="list-style-type:none">
+	<li style="font-family:serif">serif</li>
+	<li style="font-family:san-serif">sans-serif</li>
+	<li style="font-family:cursive">cursive</li>
+	<li style="font-family:fantasy">fantasy</li>
+	<li style="font-family:monospace">monospace</li>
+</ul>
+
+<p>This is the <span class="term">fallback</span> font, to be used if none of the preferred fonts are available.</p>
+<p>Note that in the above example, &quot;Times New Roman&quot; appears in quotation marks, whereas the other fonts don't. Anytime a font's name is more than one word, it must be in quotation marks.</p>
+
+<h3>font-size</h3>
+
+<p>This property specifies the size of the font. This can be expressed in relative units like <strong>%</strong> or <strong>em</strong>, or in absolute units like <strong>px</strong> (see the earlier lesson <a href="../module1/lesson1.html">Anatomy of a Style</a> if you need a refresher on these units).</p>
+<p>Font size can also be expressed using terms like <span style="font-size:small">small</span>, <span style="font-size:medium">medium</span>, <span style="font-size:large">large</span>, <span style="font-size:larger">larger</span>, <span style="font-size:x-large">x-large</span>, and <span style="font-size:xx-large">xx-large</span>.</p>
+
+<h3>font-style</h3>
+
+<p>This property specifies the style of a font, either <span style="font-style:normal">normal</span>, <span style="font-style:italic">italic</span>, or <span style="font-style:oblique">oblique</span>.</p>
+
+<h3>font-weight</h3>
+<p>This property specifies the weight, or thickness, of characters. It can be <span style="font-weight:normal">normal</span>, <span style="font-weight:lighter">lighter</span>, <span style="font-weight:bold">bold</span>, or <span style="font-weight:bolder">bolder</span>. It can also be expressed as a numeric value between <span style="font-weight:100">100</span> and <span style="font-weight:900">900</span> (numbers must be divisible by 100).
+
+<h3>line-height</h3>
+<p>This property specifies the height of a line of text. This is typically expressed either as a <strong>%</strong> or <strong>em</strong> and must be greater than the height of the font or else the lines of text will be squished together.
+</p>
+<p>For maximum readability, the W3C's <a href="http://w3.org/TR/wcag20">Web Content Accessibility Guidelines 2.0</a> calls for the line-height of blocks of text to be at least 1.5em or 150%</p>
+
+<h3>text-align</h3>
+<p>This property specifies how text is aligned horizontally. This can be either <strong>left</strong>, <strong>right</strong>, or <strong>center</strong>. It could also be <strong>justify</strong>, which aligns text on both the left and right sides of the page like a printed publication. However, this tends to result in awkward spaces between words and should be avoided on the web.</p>
+
+<h3>letter-spacing</h3>
+<p>This property enables you to specify an amount of space between letters. It can be expressed using the same units as other properties, such as font-size. It is sometimes used to give a distinctive look to certain elements such as headings.</p>
+
+<h3>text-shadow</h3>
+<p>This property is new in CSS3. Consequently it isn't supported by all browsers, but if you have a relatively current browser, this property can attach a shadow to text. If done well and used sparingly, this can be have a nice effect for content such as headings. For more information, consult the <a href="http://www.w3schools.com/cssref/css3_pr_text-shadow.asp">CSS3 Text-shadow Property</a> page at W3Schools.com.</p>
+
+<h2>Activities</h2>
+<ol>
+	<li>Study each of the following websites for some possible font-family combinations:
+	  <ul>
+  	  <li><a href="http://www.inspirationbit.com/16-best-loved-font-bits-in-web-design/">16 Best-loved Font Bits in Web Design</a> by Vivian of Inspiration Bit</li>
+  	  <li><a href="http://www.w3.org/Style/Examples/007/fonts.en.html">W3C CSS Fonts page</a></li>
+  	  <li><a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp">W3Schools: CSS Web Safe Font Combinations</a></li>
+	  </ul>
+	</li>
+	<li>Select two fonts that you think would look nice for the <strong>body</strong> of your portfolio website. Since this will affect most of the text on your website, be sure to select fonts that you think will be easy to read. Also, be sure the two fonts are in the same family (for example, two <em>sans-serif</em> fonts or two <em>serif</em> fonts). Choose fonts that are similar to each other. Keep in mind who your audience is (who might ultimately read your portfolio?) and choose fonts that reflect the message and style you want to communicate to that audience. After selecting the fonts you like, search for your chosen fonts on <a href="https://www.cssfontstack.com/">CSS Font Stack</a>. CSS Font Stack estimates the percentage of Windows and Mac computers that have each font installed. Be sure the combination of your two fonts has both Mac and Windows users covered. For example, if one of your font choices is common on Mac but not common on Windows, be sure your second font choice is common on Windows.</li>
+	<li>Now repeat the above process, this time selecting two fonts that you think would look nice for the <strong>headings</strong> on your portfolio website.</li>
+	<li>For your third font in each category, write the generic font family name, either <strong>serif</strong> or <strong>sans-serif</strong>.</li>
+	<li>Next, open your web portfolio's external style sheet in your text editor, and its home page in a browser.</li>
+	<li>Find the style definition for the <span class="element">body</span> tag. Look at the properties that are currently used to define the body style. Add a <span class="property">font-family</span> property, or if there's already one there, modify it by adding the fonts that you listed in your table. List them in order, separated by a comma. If any font name is more than one word, remember to enclose it in quotation marks. For example, assume you selected Century Gothic as your preferred font, Verdana as your browser-safe font, and sans-serif as your generic font family. Your <span class="property">font-family</span> property would then look like this:
+		<div class="code">
+			font-family: "Century Gothic",Verdana,sans-serif;
+		</div>
+	</li>
+	<li>Save the file and refresh your browser to see what effect the change had on your home page.</li>
+	<li>Now add a <span class="property">font-family</span> style for <span class="element">h1</span>, <span class="element">h2</span>, and <span class="element">h3</span> headings. <strong>Note:</strong> When the same style applies to multiple elements, you can define that using one style definition, as in the following example:
+<pre class="code">
+  h1,h2,h3 {
+    font-family: Rockwell,"Times New Roman",serif;
+  }
+</pre>
+	</li>
+	 <li>Save the file and refresh your browser to see what effect the change had on your website's headings.</li>
+	 <li>Now experiment with the other properties listed at the top of this page. Apply them one-at-a-time to various elements and see what effect they have on the page. Try to use these styles to enhance your site's readability. Try to stylize your site using typography and color so that it uses contrast, size, hierarchy, and space effectively. Keep the styles that work, and delete the ones that don't.</li>
+
+</ol>
+
+<h2>Handouts/Online Documents</h2>
+<ul>
+  <li><a href="http://www.inspirationbit.com/16-best-loved-font-bits-in-web-design/">16 Best-loved Font Bits in Web Design</a> by Vivian of Inspiration Bit</li>
+  <li><a href="http://www.w3.org/Style/Examples/007/fonts.en.html">W3C CSS Fonts page</a></li>
+  <li><a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp">W3Schools: CSS Web Safe Font Combinations</a></li>
+  <li><a href="https://www.cssfontstack.com/">CSS Font Stack</a></li>
+</ul>
+
+<h2>All done?</h2>
+<p>Show your instructor your results before continuing on to <a href="../module4/index.html">the next module</a>.</p>
+
+</div><!-- end #main -->
+<footer role="contentinfo">
+Copyright &copy; 2005-2022 by University of Washington. Permission is granted to use these materials in whole or in part for educational, noncommercial purposes provided the source is acknowledged. This product was created with support from the National Institute on Disability and Rehabilitation Research of the U.S. Department of Education (grant #H133D010306), and is maintained with support from the National Science Foundation (grant #CNS-0540615). The contents do not necessarily represent the policies of the U.S. federal government, and you should not assume their endorsement.
+</footer>
+</div><!-- end #wrapper -->
+</body>
+</html>

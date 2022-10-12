@@ -1,0 +1,24 @@
+body{
+    background-image: url(https://images.unsplash.com/photo-1533158388470-9a56699990c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGxhdmVuZGVyJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    }
+    h2{
+    font-style: italic;
+    size: 30px;
+    color: #f08080;
+    }
+    p{
+    font-size: 20px;
+    }
+    
+    .blue{
+    color: blue;
+    }
+    .red{
+    color: red;
+    }
+    .green{
+    color: green;
+    }
